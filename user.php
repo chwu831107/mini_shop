@@ -109,7 +109,7 @@ function display_user($user_sn)
     if ($isUser) {
         $user_sn = $isAdmin ? $user_sn : $_SESSION['user_sn'];
     } else {
-        die('非會員，請勿亂搞。');
+        die('還不是會員，請註冊！');
     }
     $sql    = "SELECT * FROM `users` WHERE `user_sn`='{$user_sn}'";
     $result = $mysqli->query($sql) or die($mysqli->connect_error);
